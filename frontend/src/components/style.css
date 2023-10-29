@@ -1,0 +1,26 @@
+/* style.css */
+/* Personalizar la barra de navegación */
+.navbar {
+    background-color: #333; /* Cambia el color de fondo */
+    color: white; /* Cambia el color del texto */
+  }
+  
+  /* Alinear el botón de Iniciar Sesión a la derecha */
+  .navbar .nav-link:last-child {
+    margin-left: auto;
+  }
+  
+  /* Estilo de los botones */
+  .btn-primary {
+    background-color: #007bff; /* Cambia el color de fondo del botón */
+    color: white; /* Cambia el color del texto del botón */
+  }
+  
+  /* Personalizar el área de entrada de comandos */
+  .form-control {
+    border: 2px solid #007bff; /* Cambia el borde de la entrada de comandos */
+  }
+
+  .card-mt-4{
+    border: 2px solid #007bff;
+  }
