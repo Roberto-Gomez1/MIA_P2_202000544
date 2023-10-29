@@ -93,6 +93,9 @@ def get_first_word():
         else:
             message = Disk.command_mount(path,name)
 
+    elif words.startswith('#'):
+        message = ""
+
     respuesta = {
         'estado': 'OK',
         'mensaje': message,
