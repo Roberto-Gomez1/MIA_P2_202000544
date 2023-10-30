@@ -121,5 +121,8 @@ def get_first_word():
 
     return jsonify(respuesta)
 
+@app.route('/hola', methods=['GET'])
+def hola():
+    return jsonify({'message': 'Hola Mundo'})
 if __name__ == '__main__':
     app.run(debug=True)
