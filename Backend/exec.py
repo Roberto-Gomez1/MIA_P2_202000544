@@ -111,6 +111,9 @@ def get_first_word():
     elif words.startswith('#'):
         message = ""
 
+    elif words.startswith('#'):
+        message = ""
+
     respuesta = {
         'estado': 'OK',
         'mensaje': message,
