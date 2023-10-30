@@ -1,6 +1,6 @@
 /* style.css */
 /* Personalizar la barra de navegación */
-.navbar {
+.navbar-toggler-icon{
     background-color: #333; /* Cambia el color de fondo */
     color: white; /* Cambia el color del texto */
   }
@@ -12,7 +12,7 @@
   
   /* Estilo de los botones */
   .btn-primary {
-    background-color: #007bff; /* Cambia el color de fondo del botón */
+    background-color: #0a213a; /* Cambia el color de fondo del botón */
     color: white; /* Cambia el color del texto del botón */
   }
   

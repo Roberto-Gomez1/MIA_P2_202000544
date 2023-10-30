@@ -854,7 +854,7 @@ class Disk:
             graph.body.append(graphviz)
 
             # Guardar el gráfico como una imagen PNG
-            graph.render(filename=os.path.join("./Reportes","ReporteMBR_"+nombre_archivo))
+            graph.render(filename=os.path.join("./frontend/src/Reportes","ReporteMBR_"+nombre_archivo))
         except Exception as e:
             pass
 
@@ -949,7 +949,7 @@ class Disk:
             graph.body.append(graphviz)
 
             # Guardar el gráfico como una imagen PNG
-            graph.render(filename=os.path.join("./Reportes","ReporteDisk_"+nombre_archivo))
+            graph.render(filename=os.path.join("./frontend/src/Reportes","ReporteDisk_"+nombre_archivo))
         except Exception as e:
             pass
 

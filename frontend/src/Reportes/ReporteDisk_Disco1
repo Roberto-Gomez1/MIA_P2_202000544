@@ -1,0 +1,31 @@
+digraph G {
+node [shape=plaintext];
+table [label=<
+<table border="1" cellborder="1" cellspacing="3">
+<tr> 
+<td colspan="4">MBR</td>
+<td colspan="4">Primaria 9.765625% del disco</td>
+<td colspan="4">Primaria 19.53125% del disco</td>
+<td colspan="4">
+<table border="20" cellborder="1" cellspacing="0">
+<tr> 
+ <td colspan="2"> Extendida 39.0625% del disco</td>
+</tr>
+<tr>
+<td> EBR </td>
+<td> Logica 6.0546875% del disco</td>
+<td> EBR </td>
+<td> Logica 12.109375% del disco</td>
+<td> EBR </td>
+<td> Logica 6.0546875% del disco</td>
+<td> EBR </td>
+<td> Logica 6.0546875% del disco</td>
+<td > Libre 8.7890625% del disco</td>
+</tr>
+</table>
+</td>
+<td colspan="4">Primaria 9.765625% del disco</td>
+</tr>
+</table>
+>,];
+}
