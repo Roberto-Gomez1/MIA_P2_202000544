@@ -34,10 +34,6 @@ def get_first_word():
         if size is None or path is None:
             message = "Faltan parametros obligatorios"
         else:
-            if path.startswith('.'):
-                path = path[1:]
-            path = "./frontend/src/Archivos" + path
-            print("mkdisk "+path)
             message = Disk.command_mkdisk(size, path, unit, fit)
 
     elif words[0] == 'rrmdisk':
@@ -50,10 +46,6 @@ def get_first_word():
         if path is None:
             message = "Faltan parametros obligatorios"
         else:
-            if path.startswith('.'):
-                path = path[1:]
-            path = "./frontend/src/Archivos" + path
-            print("rmdisk "+path)
             message = Disk.command_rmdisk(path)
 
     elif words[0] == 'fdisk':
@@ -82,10 +74,6 @@ def get_first_word():
         if size is None or path is None or name is None:
             message = "Faltan parametros obligatorios"
         else:
-            if path.startswith('.'):
-                path = path[1:]
-            path = "./frontend/src/Archivos" + path
-            print("fdisk "+path)
             message = Disk.command_fdisk(size,path,unit,fit,tipo,name)
             Disk.reporte_Disk(path)
             Disk.reporte_MBR(path)
@@ -103,10 +91,6 @@ def get_first_word():
         if path is None or name is None:
             message = "Faltan parametros obligatorios"
         else:
-            if path.startswith('.'):
-                path = path[1:]
-            path = "./frontend/src/Archivos" + path
-            print("mount "+path)
             message = Disk.command_mount(path,name)
     elif words.startswith('#'):
         message = ""
