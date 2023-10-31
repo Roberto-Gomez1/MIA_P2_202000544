@@ -872,6 +872,7 @@ class Disk:
                 pass
 
         except Exception as e:
+            print(e)
             pass
 
     def reporte_Disk(path):
@@ -975,6 +976,7 @@ class Disk:
                 print(e)
                 pass
         except Exception as e:
+            print(e)
             pass
 
     
