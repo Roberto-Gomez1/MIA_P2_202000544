@@ -861,7 +861,7 @@ class Disk:
             graph.body.append(graphviz)
 
             # Guardar el gráfico como una imagen PNG
-            graph.render(filename=os.path.join("/Reportes","ReporteMBR_"+nombre_archivo))
+            graph.render(filename=os.path.join("./Reportes","ReporteMBR_"+nombre_archivo))
             try:
                 s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
                 s3.upload_file("./Reportes/ReporteMBR_"+nombre_archivo+".jpg", bucket_name,"Reportes/"+"ReporteMBR_"+ nombre_archivo+".jpg")
