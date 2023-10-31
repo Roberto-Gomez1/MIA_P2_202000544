@@ -7,7 +7,7 @@ import time
 
 app = Flask(__name__)
 CORS(app)
-
+lista_nombres=[]
 @app.route('/execute', methods=['POST'])
 def get_first_word():
     data = request.get_json()
@@ -75,8 +75,13 @@ def get_first_word():
             message = "Faltan parametros obligatorios"
         else:
             message = Disk.command_fdisk(size,path,unit,fit,tipo,name)
-            Disk.reporte_Disk(path)
-            Disk.reporte_MBR(path)
+            nombre_reporte_disk = Disk.reporte_Disk(path)
+            nombre_reporte_mbr = Disk.reporte_MBR(path)
+            if nombre_reporte_disk not in lista_nombres:
+                lista_nombres.append(nombre_reporte_disk)
+
+            if nombre_reporte_mbr not in lista_nombres:
+                lista_nombres.append(nombre_reporte_mbr)
 
     elif words[0] == 'mount':
         path,name = None,None
@@ -94,6 +99,8 @@ def get_first_word():
             message = Disk.command_mount(path,name)
     elif words.startswith('#'):
         message = ""
+    else:
+        message = "Comando no reconocido"
 
     respuesta = {
         'estado': 'OK',
@@ -108,5 +115,15 @@ def get_first_word():
 @app.route('/hola', methods=['GET'])
 def hola():
     return jsonify({'message': 'Hola Mundo'})
+
+@app.route('/reporte', methods=['GET'])
+def reporte():
+    respuesta = {
+        'estado': 'OK',
+        'mensaje': lista_nombres,
+    }
+    time.sleep(1)
+    return jsonify(respuesta)
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,134 @@
+digraph G {
+node [shape=plaintext];
+table [label=<
+<table border="1" cellborder="1" cellspacing="0">
+<tr> 
+ <td colspan="4" bgcolor="lightblue">Reporte de MBR</td>
+</tr>
+<tr>
+ <td>mbr_tamano</td>
+<td>1024</td>
+ </tr>
+<tr>
+ <td>mbr_fecha</td>
+<td>1698713071</td>
+ </tr>
+<tr>
+ <td>mbr_asignature</td>
+<td>6441</td>
+ </tr>
+<tr>
+ <td>mbr_fit</td>
+<td>FF</td>
+ </tr>
+<tr> 
+ <td colspan="4" bgcolor="lightblue">Particion Primaria</td>
+</tr>
+<tr>
+ <td>part_status</td>
+<td>1</td>
+ </tr>
+<tr>
+ <td>part_type</td>
+<td>P</td>
+ </tr>
+<tr>
+ <td>part_fit</td>
+<td>FF</td>
+ </tr>
+<tr>
+ <td>part_start</td>
+<td>126</td>
+ </tr>
+<tr>
+ <td>part_size</td>
+<td>100</td>
+ </tr>
+<tr>
+ <td>part_name</td>
+<td>Part1</td>
+ </tr>
+<tr> 
+ <td colspan="4" bgcolor="lightblue">Particion Primaria</td>
+</tr>
+<tr>
+ <td>part_status</td>
+<td>1</td>
+ </tr>
+<tr>
+ <td>part_type</td>
+<td>P</td>
+ </tr>
+<tr>
+ <td>part_fit</td>
+<td>FF</td>
+ </tr>
+<tr>
+ <td>part_start</td>
+<td>226</td>
+ </tr>
+<tr>
+ <td>part_size</td>
+<td>200</td>
+ </tr>
+<tr>
+ <td>part_name</td>
+<td>Part2</td>
+ </tr>
+<tr> 
+ <td colspan="4" bgcolor="lightblue">Particion Primaria</td>
+</tr>
+<tr>
+ <td>part_status</td>
+<td>0</td>
+ </tr>
+<tr>
+ <td>part_type</td>
+<td>P</td>
+ </tr>
+<tr>
+ <td>part_fit</td>
+<td>BF</td>
+ </tr>
+<tr>
+ <td>part_start</td>
+<td>0</td>
+ </tr>
+<tr>
+ <td>part_size</td>
+<td>0</td>
+ </tr>
+<tr>
+ <td>part_name</td>
+<td></td>
+ </tr>
+<tr> 
+ <td colspan="4" bgcolor="lightblue">Particion Primaria</td>
+</tr>
+<tr>
+ <td>part_status</td>
+<td>0</td>
+ </tr>
+<tr>
+ <td>part_type</td>
+<td>P</td>
+ </tr>
+<tr>
+ <td>part_fit</td>
+<td>BF</td>
+ </tr>
+<tr>
+ <td>part_start</td>
+<td>0</td>
+ </tr>
+<tr>
+ <td>part_size</td>
+<td>0</td>
+ </tr>
+<tr>
+ <td>part_name</td>
+<td></td>
+ </tr>
+</table>
+>,];
+}

@@ -1,0 +1,14 @@
+digraph G {
+node [shape=plaintext];
+table [label=<
+<table border="1" cellborder="1" cellspacing="3">
+<tr> 
+<td colspan="4">MBR</td>
+<td colspan="4">Primaria 9.765625% del disco</td>
+<td colspan="4">Primaria 19.53125% del disco</td>
+<td colspan="4">Primaria 0.0% del disco</td>
+<td colspan="4">Primaria 0.0% del disco</td>
+</tr>
+</table>
+>,];
+}

@@ -2,11 +2,18 @@ import random
 import os
 import time
 import struct
-import sys
+import os
 import Struct.Structs
 import graphviz as gv
 from Global.Global import mounted_partitions
+from dotenv import load_dotenv
+import boto3
 
+load_dotenv()
+aws_access_key_id= os.getenv("AWS_KEY_ID")
+aws_secret_access_key= os.getenv("AWS_SECRET_KEY")
+bucket_name = "mia-p2-202000544"
+lista_nombres= ""
 
 class Disk:
     def __init__(self):
@@ -854,7 +861,16 @@ class Disk:
             graph.body.append(graphviz)
 
             # Guardar el gráfico como una imagen PNG
-            graph.render(filename=os.path.join("./frontend/src/Reportes","ReporteMBR_"+nombre_archivo))
+            graph.render(filename=os.path.join("./Reportes","ReporteMBR_"+nombre_archivo))
+            try:
+                s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
+                s3.upload_file("./Reportes/ReporteMBR_"+nombre_archivo+".jpg", bucket_name,"Reportes/"+"ReporteMBR_"+ nombre_archivo+".jpg")
+                lista_nombres =("ReporteMBR_"+ nombre_archivo+".jpg")
+                return lista_nombres
+            except Exception as e:
+                print(e)
+                pass
+
         except Exception as e:
             pass
 
@@ -949,7 +965,15 @@ class Disk:
             graph.body.append(graphviz)
 
             # Guardar el gráfico como una imagen PNG
-            graph.render(filename=os.path.join("./frontend/src/Reportes","ReporteDisk_"+nombre_archivo))
+            graph.render(filename=os.path.join("./Reportes","ReporteDisk_"+nombre_archivo))
+            try:
+                s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
+                s3.upload_file("./Reportes/ReporteDisk_"+nombre_archivo+".jpg", bucket_name,"Reportes/"+"ReporteDisk_"+ nombre_archivo+".jpg")
+                lista_nombres=("ReporteDisk_"+ nombre_archivo+".jpg")
+                return lista_nombres
+            except Exception as e:
+                print(e)
+                pass
         except Exception as e:
             pass
 
