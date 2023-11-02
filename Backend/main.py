@@ -35,6 +35,13 @@ def get_first_word():
             message = "Faltan parametros obligatorios"
         else:
             message = Disk.command_mkdisk(size, path, unit, fit)
+            nombre_reporte_disk = Disk.reporte_Disk(path)
+            nombre_reporte_mbr = Disk.reporte_MBR(path)
+            if nombre_reporte_disk not in lista_nombres:
+                lista_nombres.append(nombre_reporte_disk)
+
+            if nombre_reporte_mbr not in lista_nombres:
+                lista_nombres.append(nombre_reporte_mbr)
 
     elif words[0] == 'rrmdisk':
         path = None
@@ -97,7 +104,7 @@ def get_first_word():
             message = "Faltan parametros obligatorios"
         else:
             message = Disk.command_mount(path,name)
-    elif words.startswith('#'):
+    elif words[0].startswith('#'):
         message = ""
     else:
         message = "Comando no reconocido"
